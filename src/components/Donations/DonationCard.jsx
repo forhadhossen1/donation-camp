@@ -1,9 +1,32 @@
 import swal from "sweetalert";
 
 const DonationCard = ({ donation }) => {
-    const { picture, title, text_button_bg_color, description, price } = donation || {}
+    const { id, picture, title, text_button_bg_color, description, price } = donation || {}
+
     const handleDonate = () => {
         swal("Good job!", "You are successfully donate!", "success");
+
+        const addDonateItems = [];
+        const donateItems = JSON.parse(localStorage.getItem('donates'))
+        if (!donateItems) {
+            addDonateItems.push(donation);
+            localStorage.setItem('donates', JSON.stringify(addDonateItems));
+            
+        }
+        else {
+
+            const isExits = donateItems.find(donates => donates.id === id)
+
+            if (!isExits) {
+                addDonateItems.push(...donateItems, donation)
+                localStorage.setItem('donates', JSON.stringify(addDonateItems));
+            }
+            else{
+                swal("Oops!", "Alredy donate!", "error");
+            }
+
+
+        }
     }
     // console.log(donation);
     return (
