@@ -17,7 +17,7 @@ const Banner = ({onCategorySeacrh}) => {
                     <div className=" flex flex-col">
                         <p className="text-2xl font-bold text-black">I Grow By Helping People In Need.</p>
 
-                        <div className="md:flex py-6 mx-auto gap-4">
+                        <div className="md:flex py-6 mx-auto">
                         <input id="input-field" type="text" 
                         onChange={(e)=>setSearchText(e.target.value)} placeholder="Search here..." className="input  w-full max-w-xs text-black"/>
                            

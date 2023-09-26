@@ -19,7 +19,7 @@ const Donation = () => {
       setNoDonate();
     }
   }, [])
-  
+
   return (
     <div>
       {
@@ -28,14 +28,22 @@ const Donation = () => {
             <div className="grid gap-6 lg:grid-cols-2 py-12">
               {
                 moreShow ? donations.map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
-                :
-                donations.slice(0, 4).map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
+                  :
+                  donations.slice(0, 4).map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
               }
             </div>
 
             <div>
               <div className='flex justify-center'>
-                {donations.length >= 4 && <button onClick={() => setMoreShow(!moreShow)} className='bg-orange-200 p-3 rounded-lg my-4'>{moreShow ? 'See less' : 'See All'} </button>}
+                {donations.length >= 4 && (
+                  <button
+                    id="button"
+                    onClick={() => setMoreShow(!moreShow)} // Toggle 'moreShow' state
+                    className={`bg-orange-200 p-3 rounded-lg my-4 ${moreShow ? 'hidden' : ''}`}
+                  >
+                    {moreShow ? 'Hide' : 'See All'}
+                  </button>
+                )}
               </div>
             </div>
           </div>
