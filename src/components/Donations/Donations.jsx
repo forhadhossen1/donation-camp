@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import DonationsCards from "./DonationsCards";
 
 const Donations = ({ donations, selectedCategory }) => {
@@ -14,5 +15,10 @@ const Donations = ({ donations, selectedCategory }) => {
         </div>
     );
 };
+
+Donations.propTypes = {
+    donations: PropTypes.any,
+    selectedCategory: PropTypes.any
+  };
 
 export default Donations;

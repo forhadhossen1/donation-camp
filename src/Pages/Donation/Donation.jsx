@@ -35,7 +35,7 @@ const Donation = () => {
 
             <div>
               <div className='flex justify-center'>
-                {donations.length >= 4 && <button onClick={() => setMoreShow(!moreShow)} className='bg-orange-200 p-3 rounded-lg my-4'>{moreShow ? 'See less' : 'See more'} </button>}
+                {donations.length >= 4 && <button onClick={() => setMoreShow(!moreShow)} className='bg-orange-200 p-3 rounded-lg my-4'>{moreShow ? 'See less' : 'See All'} </button>}
               </div>
             </div>
           </div>

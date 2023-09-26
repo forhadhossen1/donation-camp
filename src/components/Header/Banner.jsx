@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 
 const Banner = ({onCategorySeacrh}) => {
@@ -28,5 +29,9 @@ const Banner = ({onCategorySeacrh}) => {
         </div>
     );
 };
+
+Banner.propTypes = {
+    onCategorySeacrh: PropTypes.any
+  };
 
 export default Banner;
