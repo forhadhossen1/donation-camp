@@ -19,6 +19,7 @@ const Donation = () => {
       setNoDonate();
     }
   }, [])
+  
   return (
     <div>
       {

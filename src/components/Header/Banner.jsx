@@ -1,5 +1,13 @@
 
 const Banner = () => {
+
+    const handleSearch =()=> {
+        // console.log('hello world')
+        const searchField = document.getElementById('input-field');
+        const searchText = searchField.value;
+        console.log(searchText);
+    }
+
     return (
         <div className="mt-4">
             <div className="hero min-h-[650px] rounded-lg" style={{ backgroundImage: 'url(public/d.banner.jpg)' }}>
@@ -9,9 +17,9 @@ const Banner = () => {
                         <p className="text-2xl font-bold text-black">I Grow By Helping People In Need.</p>
 
                         <div className="md:flex py-6 mx-auto gap-4">
-                        <input type="text" placeholder="Search here..." className="input  w-full max-w-xs"/>
+                        <input id="input-field" type="text" placeholder="Search here..." className="input  w-full max-w-xs"/>
                            
-                            <button className=" btn md:p-3 active:bg-slate-500 px-5  rounded-r-lg bg-[#FF444A]">Search</button>
+                            <button onClick={handleSearch} className=" btn md:p-3 active:bg-slate-500 px-5  rounded-r-lg bg-[#FF444A]">Search</button>
                         </div>
                     </div>
                 </div>
