@@ -7,27 +7,27 @@ const Statistics = () => {
 
   const [donation, setDonation] = useState(0)
 
-  useEffect(()=>{
+  useEffect(() => {
     const donationItems = JSON.parse(localStorage.getItem('donates'))
 
     if (donationItems) {
       setDonation(donationItems.length)
     }
-  },[])
+  }, [])
   // Sample data
   const seriesData = [12, donation];
-  const labels = ['Total', 'Donate'];
+  const labels = ['Total Donation', 'Your Donation'];
 
   const options = {
     labels: labels,
-    noData: {text:'Empty Date'},
+    noData: { text: 'Empty Date' },
     chart: {
       type: 'pie',
-      width: 300, // Adjust the width as needed
+      // width: 150
     },
 
     dataLabels: {
-      enabled: true, 
+      enabled: true,
     },
 
     legend: {
@@ -36,12 +36,13 @@ const Statistics = () => {
   };
 
   return (
-    <div className=' flex justify-center container mx-auto px-2'>
-      <ApexCharts
-        options={options}
-        series={seriesData}
-        type='pie'
-        width={300} />
+    <div className=' flex justify-center mt-14'>
+      <div
+        className='w-full max-w-xs md:max-w-lg'
+        style={{ maxWidth: '400px' }} 
+      >
+        <ApexCharts options={options} series={seriesData} type='pie' />
+      </div>
     </div>
   );
 };

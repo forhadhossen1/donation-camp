@@ -16,7 +16,7 @@ const DonationCard = ({ donation }) => {
                 <div className="p-6">
 
                     <div className="">
-                        <button style={{ background: category_bg_color, color: text_button_bg_color, padding: '7px', borderRadius: '7px' }}>
+                        <button style={{ background: category_bg_color, color: text_button_bg_color, padding: '5px', borderRadius: '7px' }}>
                             {category}
                         </button>
                     </div>
