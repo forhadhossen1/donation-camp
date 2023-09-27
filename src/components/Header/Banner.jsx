@@ -11,7 +11,7 @@ const Banner = ({onCategorySeacrh}) => {
 
     return (
         <div className="mt-4">
-            <div className="hero min-h-[650px] rounded-lg" style={{ backgroundImage: 'url(public/d.banner.jpg)' }}>
+            <div className="hero min-h-[650px] rounded-lg" style={{ backgroundImage: 'url(/d.banner.jpg)' }}>
                 <div className="hero-overlay bg-opacity-90 bg-white"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className=" flex flex-col">

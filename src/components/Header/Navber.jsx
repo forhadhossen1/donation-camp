@@ -4,7 +4,7 @@ const Navber = () => {
     return (
         <div className="pt-14 px-5 md:flex justify-between items-center">
             <div>
-                <img src="../../public/Logo.png" alt="Logo" />
+                <img src="https://i.ibb.co/bLVM0wD/Logo.png" alt="Logo" />
             </div>
 
             <div>
