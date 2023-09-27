@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import swal from "sweetalert";
 
 const DonationCard = ({ donation }) => {
@@ -76,5 +77,9 @@ const DonationCard = ({ donation }) => {
         </div>
     );
 };
+
+DonationCard.propTypes = {
+    donation: PropTypes.any
+  };
 
 export default DonationCard;
